@@ -1,7 +1,11 @@
 print('My name is')
 for i in range(12,16):
     print('Danny Dingbat ' + str(i))
+print('\n')
 
+print('My name is')
+for i in range(0,16,2):
+    print('Danny Dingbat ' + str(i))
 # for i in range(5):
 #   print('Danny Dingbat ' + str(i))
 #   print('\n')
