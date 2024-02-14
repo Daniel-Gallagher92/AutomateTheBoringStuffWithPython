@@ -3,48 +3,65 @@
 
 import random
 
-def print_welcome_message(): #asks user's name and the function will return the user's input
-    print('Hey there, what\'s your name?')
+def welcome_message(): #asks user's name and the function will return the user's input
+    print('Hey there, what\'s your name?\n')
     return input() #the return value of the entire function will come from this line 
 
-def print_guess_message(chances):
-    print('You get {} tries. Can you guess what number I\'m thinking of?'.format(chances))
-    print()
+# def guess_message(chances):
+#     print('You get {} tries. Can you guess what number I\'m thinking of?'.format(chances))
+#     print() # Turns out you can use the print() function with an empty arg to create new line!
 
+# def guess_message(chances):
+#     if chances == 1:
+#         print('1 more chance!')
+#     else:
+#         print('You get {} tries. Can you guess what number I\'m thinking of?\n'.format(chances))
+# #Or you can just insert a \n new line character at the end of existing strings for readability
+        
+def guess_message(chances):
+    message = '1 more chance!' if chances == 1 else 'You get {} tries. Can you guess what number I\'m thinking of?'.format(chances)
+    print(message + '\n')
+    
 def get_guess():
-    return int(input())
+    while True:
+        try:
+          return int(input('\n'))
+        except ValueError:
+            print('Please enter a valid number.\n')
+            
 
-def print_remaining_chances(chances):
-    if chances > 1:
-        print('{} more chances left.'.format(chances - 1))
-    elif chances == 1:
-        print('Only 1 more chance!!!')
-    print()
+def remaining_chances(chances):
+  if chances == 1:
+        print('1 more chance!!!\n')
+  else:
+        print('{} more chances left.\n'.format(chances - 1))
 
 def play_game():
-    print('Well, {}, I\'m thinking of a number between 1 and 100...'.format(myName))
     print()
+    print('Well, {}, I\'m thinking of a number between 1 and 100...\n'.format(myName))
     secretNumber = random.randint(1, 100)
     chances = 6
 
-    for guessesTaken in range(1, chances + 1):
-        print_guess_message(chances)
+    guess_message(chances)
+
+    for guessesTaken in range(1, chances + 1): # + 1 added to chances to ensure the proper range is covered
         guess = get_guess()
 
         if guess < secretNumber:
-            print('Your guess is too low')
+            print('Your guess is too low\n')
         elif guess > secretNumber:
-            print('Your guess is too high')
+            print('Your guess is too high\n')
         else:
             print('Congratulations, you guessed the correct number!')
             break
 
-        print_remaining_chances(chances)
+        remaining_chances(chances)
         chances -= 1
+
     else:
         print('Sorry, you ran out of luck! The number I was thinking of was', secretNumber)
 
     print('\nYou took', guessesTaken, 'guesses.')
 
-myName = print_welcome_message()
+myName = welcome_message()
 play_game()
