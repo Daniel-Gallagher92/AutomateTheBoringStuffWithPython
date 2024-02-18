@@ -32,3 +32,9 @@ spam = ['cat','bat','rat', 'elephant']
 print(spam[:2])
 print(spam[1:])
 
+#use a del statement to delete elements from array 
+# the del statement is the "unassignment" statement 
+
+del spam[2]
+print(spam) #removed rat
+
