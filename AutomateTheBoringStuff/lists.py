@@ -62,3 +62,11 @@ print('Howdy' in ['Hey', 'Hiya', 'Hey there', 'Howdy']) #True
 
 print('Howdy' not in ['Hey', 'Hiya', 'Hey there', 'Howdy']) #False
 print('hello' not in ['Hey', 'Hiya', 'Hey there', 'Howdy']) #True
+
+#Notes on lists that are different from Ruby
+
+#reminder you can access the list in reverse using negative integers
+
+#The slice has 2 indexes. the returned list will have the first index and then UP TO BUT NOT INCLUDE last index
+# the len() function, concatenation, and replication work the same with lists as they do with strings
+#You can convert a value to a list passing it to the list() function 
