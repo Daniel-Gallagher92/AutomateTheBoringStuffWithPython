@@ -20,3 +20,15 @@ print(spam)
 spam[1:3] = ['CAT','DOG','MONKEY']
 
 print(spam)
+
+
+#slice shortcut 
+
+#Leaving out the first index of the slice syntax (before colon) is the same as using the first index position
+#Leaving out the last index of the slice syntax (after colon) is the same as using the length of the list which goes to the 
+#last index position
+
+spam = ['cat','bat','rat', 'elephant']
+print(spam[:2])
+print(spam[1:])
+
