@@ -38,3 +38,12 @@ print(spam[1:])
 del spam[2]
 print(spam) #removed rat
 
+#You may also use the len statement on lists/array's 
+
+print(len([1,2,3,4])) #Prints that the length is 4
+
+#You can also do list concatenation 
+
+print([1,2,3] + [4,5,6]) #prints [1, 2, 3, 4, 5, 6]
+
+#The same applies to replication #The majority of things you may do with strings, you can do with lists
