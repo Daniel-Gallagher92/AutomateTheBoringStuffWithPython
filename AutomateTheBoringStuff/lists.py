@@ -54,3 +54,11 @@ print([1,2,3] * 3)
 # A list function also exists
 
 print(list('Hello'))
+
+#You may also use the IN or NOT IN operators to determine whether a not an element in included in a list
+
+print('hello' in ['Hey', 'Hiya', 'Hey there', 'Howdy']) #False
+print('Howdy' in ['Hey', 'Hiya', 'Hey there', 'Howdy']) #True
+
+print('Howdy' not in ['Hey', 'Hiya', 'Hey there', 'Howdy']) #False
+print('hello' not in ['Hey', 'Hiya', 'Hey there', 'Howdy']) #True
