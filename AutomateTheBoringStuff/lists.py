@@ -47,3 +47,6 @@ print(len([1,2,3,4])) #Prints that the length is 4
 print([1,2,3] + [4,5,6]) #prints [1, 2, 3, 4, 5, 6]
 
 #The same applies to replication #The majority of things you may do with strings, you can do with lists
+
+print('Hello' * 3)
+print([1,2,3] * 3)
