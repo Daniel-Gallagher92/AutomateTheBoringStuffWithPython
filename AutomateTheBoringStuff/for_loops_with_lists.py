@@ -43,3 +43,41 @@ for i in range(len(supplies)):
 #Great for running loop code over a list of ANY size when you need the integer index position
   # as well as the value associated with the list item 
 
+#Multiple assignment 
+
+#instead of:
+
+cat = ["Fat", "Orange", "Loud"]
+size = cat[0]
+color = cat[1]
+disposition = cat[2]
+
+#You can use the multiple assignment operator 
+#multiple variables on the LEFT SIDE of the assignment operator separated by a comma 
+
+size, color, disposition = cat
+print(size)
+print(color)
+print(disposition)
+
+#Another useful trick is that you can have multiple var on the left side,
+# and multiple values on the right side separated by commas as well
+print()
+size, color, disposition = "small", "black", "quiet"
+
+print(size)
+print(color)
+print(disposition)
+
+#This latter trick is used commonly for SWAPPING VARIABLES or swap operations 
+print()
+a = "AAA"
+b = "BBB"
+
+print(a)
+print(b)
+
+print()
+a,b = b,a
+print(a)
+print(b)
