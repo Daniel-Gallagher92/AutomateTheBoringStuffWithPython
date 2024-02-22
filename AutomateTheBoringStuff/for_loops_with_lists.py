@@ -1,6 +1,9 @@
 #A for loop repeats the code block once for each value in a list or list-like value
 
-#Range objects are a list-like value
+#For loops technically iterate over the values in a list
+
+#Range function returns a list-like value, which can be passed to the list() function 
+  #if you need actual value
 
 print(range(4)) # returns a range obj == range(0,4)
 
@@ -62,6 +65,8 @@ print(disposition)
 
 #Another useful trick is that you can have multiple var on the left side,
 # and multiple values on the right side separated by commas as well
+
+
 print()
 size, color, disposition = "small", "black", "quiet"
 
@@ -70,6 +75,8 @@ print(color)
 print(disposition)
 
 #This latter trick is used commonly for SWAPPING VARIABLES or swap operations 
+
+#vars can swap their values using multiple assignment 
 print()
 a = "AAA"
 b = "BBB"
@@ -81,3 +88,19 @@ print()
 a,b = b,a
 print(a)
 print(b)
+
+#augmented assignment operators 
+meaning_of_life = 42
+
+meaning_of_life = meaning_of_life + 1 #returns 43
+
+meaning_of_life += 1 #returns 44 in a more eloquent and readable way
+
+print(meaning_of_life) #44
+
+#operators include
+# += increment
+# -= decrement
+# *= multiply
+# /= divide
+# %= modulo 
