@@ -30,3 +30,16 @@ print(list(range(0,100,2))) #returns [0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22,
 to_100_by_2 = list(range(0,100,2))
 print()
 print(to_100_by_2)
+
+# a nice python trick is to use a for loop with the range function with the len function that is passed
+# some list value
+print()
+supplies = ["monkey wrench", "flame-thrower", "No. 2 Pencil"]
+
+for i in range(len(supplies)):
+  print("Index " + str(i) + " in supplies is " + supplies[i])
+  print()
+
+#Great for running loop code over a list of ANY size when you need the integer index position
+  # as well as the value associated with the list item 
+
