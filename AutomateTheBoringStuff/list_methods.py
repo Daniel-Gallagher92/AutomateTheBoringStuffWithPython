@@ -37,3 +37,7 @@ print(spam4)
 spam4.sort()
 
 print(spam4) # returns values sorted in alphabetical order 
+
+spam4.sort(reverse=True)
+
+print(spam4) # returns values sorted in reverse alphabetical order 
