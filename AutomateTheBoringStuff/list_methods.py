@@ -13,3 +13,7 @@ print(spam2)
 spam2.append('moose')
 
 print(spam2)
+
+spam2.insert(2, 'wombat')
+
+print(spam2) #inserts wombat at index position 2
