@@ -23,3 +23,9 @@ spam2.remove('moose')
 print(spam2) #returns same list without moose, no matter the index position
 
 # remove() only accepts 1 arg at a time 
+
+spam3 = [8, 2, 5, 3.14, 1, -8]
+
+spam3.sort()
+
+print(spam3) #returns values sorted in ascending order
