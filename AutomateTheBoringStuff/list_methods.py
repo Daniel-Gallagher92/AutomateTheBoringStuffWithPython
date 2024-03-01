@@ -17,3 +17,9 @@ print(spam2)
 spam2.insert(2, 'wombat')
 
 print(spam2) #inserts wombat at index position 2
+
+spam2.remove('moose')
+
+print(spam2) #returns same list without moose, no matter the index position
+
+# remove() only accepts 1 arg at a time 
