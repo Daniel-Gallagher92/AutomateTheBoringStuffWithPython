@@ -29,3 +29,11 @@ spam3 = [8, 2, 5, 3.14, 1, -8]
 spam3.sort()
 
 print(spam3) #returns values sorted in ascending order
+
+spam4 = ['cat', 'aardvaark', 'dogs', 'badger', 'elephant']
+
+print(spam4)
+
+spam4.sort()
+
+print(spam4) # returns values sorted in alphabetical order 
