@@ -12,3 +12,12 @@ print(spam)
 cheese[1] = 'Hello!'
 print(cheese)
 print(spam) 
+
+# Passing Lists in Function Calls 
+
+def eggs(cheese):
+  cheese.append('Sausage')
+
+spam = [1, 2, 3]
+eggs(spam) #Here we pass a reference to the list stored in 'spam'
+print(spam)
