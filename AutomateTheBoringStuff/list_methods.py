@@ -41,3 +41,8 @@ print(spam4) # returns values sorted in alphabetical order
 spam4.sort(reverse=True)
 
 print(spam4) # returns values sorted in reverse alphabetical order 
+
+spam5 = ['a', 'z' , 'A' , 'Z']
+spam5.sort(key=str.lower) #returns true alphabetical order it "sorts normally"
+
+print(spam5)
