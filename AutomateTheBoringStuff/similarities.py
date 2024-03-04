@@ -32,3 +32,19 @@ cheese[1] = 42
 print(cheese) #This reflects the changes made 
 print(spam) # This will print the original, unmodified list
 
+# Line Continuation with lists. Improves readability with longer lists vs one lining 
+spam = ['Apples',
+        'Oranges',
+        'Clementines',
+        'Bananas']
+
+print(spam)
+
+# Line Continuation using the '\' new line char
+
+print('In today\'s news...' + \
+      'interest rates are down' + \
+        ' and entry level jobs are plentiful!!!')
+
+#The above code block prints as normal:
+# In today's news...interest rates are down and entry level jobs are plentiful!!!
