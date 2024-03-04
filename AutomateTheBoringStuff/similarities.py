@@ -21,3 +21,14 @@ def eggs(cheese):
 spam = [1, 2, 3]
 eggs(spam) #Here we pass a reference to the list stored in 'spam'
 print(spam)
+
+# In the case you DO want a completely separate list, use the copy.deepcopy() module function
+import copy #import the copy module library
+
+spam = ['A', 'B', 'C', 'D']
+
+cheese = copy.deepcopy(spam)
+cheese[1] = 42
+print(cheese) #This reflects the changes made 
+print(spam) # This will print the original, unmodified list
+
