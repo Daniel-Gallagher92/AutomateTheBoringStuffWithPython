@@ -52,3 +52,20 @@ print(list(myDog.values())) #Returns ['smol', 'black/brown', 'snuggly']
 print(list(myDog.keys())) #Returns ['size', 'color', 'disposition']
 
 #[('size', 'smol'), ('color', 'black/brown'), ('disposition', 'snuggly')] are known as two item tuples
+
+
+
+#Using these methods in for loops
+
+for k in myDog.keys():     # Returns size
+  print(k)                 #         color
+                           #         disposition
+  
+for v in myDog.values():   # Returns smol
+    print(v)               #         black/brown
+                           #         snuggly
+    
+
+for k,v in myDog.items():  # Returns size smol
+    print(k,v)             #         color black/brown
+                           #         disposition snuggly
