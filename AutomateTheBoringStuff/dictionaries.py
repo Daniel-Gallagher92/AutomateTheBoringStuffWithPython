@@ -96,3 +96,26 @@ picnicItems = {'apples': 5,
                 'sandwiches': 5}
 
 print('I\'m bringing ' + str(picnicItems.get('napkins', 0)) + ' napkins to the picnic.') # Returns I'm bringing 0 napkins to the picnic
+
+
+
+
+#setdefault method
+
+# Instead of typing out 
+if 'name' not in myDog: 
+    myDog['name'] = 'Fido'
+
+print(myDog.items())
+
+# setdefault allows you to do that in one line of code 
+
+myOtherDog.setdefault('name', 'Navi')
+
+print(myOtherDog.items()) # Returns dict_items([('color', 'black/brown'), ('disposition', 'snuggly'), ('size', 'smol'), ('name', 'Navi')])
+
+# However, if you attempt to setdefault after the first time, it does nothing 
+
+myOtherDog.setdefault('name', 'Fido') # Does not change Navi to Fido
+
+print(myOtherDog.items()) # Returns dict_items([('color', 'black/brown'), ('disposition', 'snuggly'), ('size', 'smol'), ('name', 'Navi')])
