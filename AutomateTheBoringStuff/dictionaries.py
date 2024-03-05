@@ -91,3 +91,8 @@ print('smol' in myDog.values()) #Returns True since that value does indeed exist
 print(myOtherDog.get('age', 0)) # Returns 0 since no age key exists in the myOtherDog dictionary
 
 print(myOtherDog.get('disposition', 'happy')) # Returns snuggly since this key exists
+
+picnicItems = {'apples': 5,
+                'sandwiches': 5}
+
+print('I\'m bringing ' + str(picnicItems.get('napkins', 0)) + ' napkins to the picnic.') # Returns I'm bringing 0 napkins to the picnic
