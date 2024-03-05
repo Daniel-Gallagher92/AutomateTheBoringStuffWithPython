@@ -15,4 +15,15 @@ myOtherDog = { 'color': 'black/brown',
               'size': 'smol'
               }
 
-print(myDog == myOtherDog) # Evaluates to true because order does not matter in dictionaries 
+print(myDog == myOtherDog) # Evaluates to True because order does not matter in dictionaries 
+
+
+# Using the in and not in operator to see if specific keys exist
+
+print('size' in myOtherDog) # Evaluates to True because key does exist in myOtherDog dictionary
+
+print('name' in myOtherDog) # Evaluates to False because key does NOT exist in myOtherDog dictionary
+
+print('size' not in myOtherDog) # Evaluates to False because key does exist in myOtherDog dictionary
+
+print('name' not in myOtherDog) # Evaluates to True because key does NOT exist in myOtherDog dictionary
