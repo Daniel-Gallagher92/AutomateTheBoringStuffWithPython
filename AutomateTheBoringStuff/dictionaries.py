@@ -69,3 +69,11 @@ for v in myDog.values():   # Returns smol
 for k,v in myDog.items():  # Returns size smol
     print(k,v)             #         color black/brown
                            #         disposition snuggly
+    
+# Otherwise, if we just used a single variable, the items would be returned as two item tuples
+    
+for i in myDog.items(): # Returns ('size', 'smol')
+      print(i)          #         ('color', 'black/brown')
+                        #         ('disposition', 'snuggly')
+
+print('smol' in myDog.values()) #Returns True since that value does indeed exist
