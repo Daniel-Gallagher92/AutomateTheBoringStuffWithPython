@@ -77,3 +77,17 @@ for i in myDog.items(): # Returns ('size', 'smol')
                         #         ('disposition', 'snuggly')
 
 print('smol' in myDog.values()) #Returns True since that value does indeed exist
+
+
+
+# get() method
+
+# **takes 2 arguments** 
+
+# The first arg is the key of the value we want to retrieve 
+
+# The second arg is a fallback default value that the method returns if that key doesn't exist 
+
+print(myOtherDog.get('age', 0)) # Returns 0 since no age key exists in the myOtherDog dictionary
+
+print(myOtherDog.get('disposition', 'happy')) # Returns snuggly since this key exists
