@@ -13,3 +13,35 @@ theBoard = {'top-L': ' ', 'top-M': ' ', 'top-R': ' ',
             'mid-L': ' ', 'mid-M': ' ', 'mid-R': ' ',
             'low-L': ' ', 'low-M': ' ', 'low-R': ' '}
 
+import pprint
+
+pprint.pprint(theBoard)
+
+theBoard['top-L'] = 'O'
+theBoard['top-M'] = 'O'
+theBoard['top-R'] = 'O'
+theBoard['mid-L'] = 'X'
+theBoard['mid-M'] = 'X'
+theBoard['low-R'] = 'X'
+
+pprint.pprint(theBoard)
+
+def printBoard(board):
+    """Print board
+    
+    Prints each row of a given tic-tac-toe board.
+    
+    Args:
+        board:  Dictionary containing space names as keys and contents as values.
+
+    Returns:
+        None. Prints rows of tic-tac-toe board.
+    """
+    print(board['top-L'] + '|' + board['top-M'] + '|' + board['top-R'])
+    print('-+-+-')
+    print(board['mid-L'] + '|' + board['mid-M'] + '|' + board['mid-R'])
+    print('-+-+-')
+    print(board['low-L'] + '|' + board['low-M'] + '|' + board['low-R'])
+
+print()
+printBoard(theBoard)
