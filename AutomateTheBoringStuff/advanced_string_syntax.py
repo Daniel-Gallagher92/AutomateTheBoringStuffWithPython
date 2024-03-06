@@ -4878,3 +4878,11 @@ subscribe to our email newsletter to hear about new eBooks.
 """
 print() 
 print(len(spam)) #returns the count of all characters in the romeo and juliet script
+
+spam = 'Hello world!'
+
+print(spam[0]) #Returns H
+print(spam[1:5]) # Slice function on a string Returns ello
+print(spam[-1]) # Returns ! working from end of string with negative indices 
+print('Hello' in spam) # Returns True since 'Hello' does indeed exist in the string
+print('HELLO' in spam) # Returns false because it is case sensitive, and this doesn't exist
