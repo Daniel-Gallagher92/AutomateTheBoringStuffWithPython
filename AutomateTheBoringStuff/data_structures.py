@@ -45,3 +45,11 @@ def printBoard(board):
 
 print()
 printBoard(theBoard)
+
+
+#type function for when you need to identify value you are working with
+print(type(42)) #returns <class 'int'>
+print(type('hiya')) #returns <class 'str'>
+print(type(3.14)) #returns <class 'float'>
+print(type(theBoard)) #returns <class 'dict'>
+print(type(theBoard['mid-M'])) #returns <class 'str'> which helps identify the VALUE paired to the key
