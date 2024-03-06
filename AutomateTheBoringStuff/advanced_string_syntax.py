@@ -12,3 +12,12 @@ print()
 print(r'That is Brittani\'s dog.') # returns That is Brittani\'s dog. 
 print()
 
+### Multiline strings 
+dogBurglar = print("""Dear Brittani,
+      Navi has been arrested for shoplifting chicken chips,
+      burglary,
+      and extortion of the Pet Shop owner.
+      Sincerely,
+      The FBI""")
+
+dogBurglar
