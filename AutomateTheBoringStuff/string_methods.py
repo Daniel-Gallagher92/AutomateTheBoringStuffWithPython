@@ -96,3 +96,15 @@ print('My name is Daniel'.split()) #Returns ['My', 'name', 'is', 'Daniel']
 print('My name is Daniel'.split('a')) #Returns ['My n', 'me is D', 'niel']
 
 # note: this will remove the argument that is passed. all a's are now gone
+
+# ljust() and rjust() 
+
+print('Hello'.rjust(10)) #returns |     Hello
+
+print(len('     Hello')) #returns 10
+
+print('Hello'.ljust(10)) #same effect, but left side has padding to make total length 10
+
+# with optional second arg
+
+print('Hello'.ljust(10, '*')) # returns Hello*****
