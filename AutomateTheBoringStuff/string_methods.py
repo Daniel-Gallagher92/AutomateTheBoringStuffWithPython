@@ -141,3 +141,10 @@ print('SpamSpamBaconSpamEggsSpamSpam'.strip('ampS')) # returns 'BaconSpamEggs'
 spam = 'Hola amigo!'
 
 print(spam.replace('a', 'XYZ')) # returns 'HolXYZ XYZmigo!'
+
+#note on pyperclip 
+
+import pyperclip
+
+pyperclip.copy('Hello!!!!') # Now try right clicking and pasting and you will see 'Hello!!!!'
+
