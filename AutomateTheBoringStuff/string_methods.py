@@ -66,3 +66,17 @@ print('hello world!'[5].isspace()) #Returns True
 print('This Is Title Case'.istitle()) #Returns True ONLY if EVERY word in string begins with uppercase and is followed by lowercase chars
 
 print('hello world'.title()) # Returns 'Hello World'
+print()
+
+# startswith() endswith()
+
+print('Hello world'.startswith('Hello')) #Returns True
+
+print('Hello world'.startswith('H')) #Returns True
+
+print('Hello world'.startswith('ello')) #Returns False
+
+print('Hello world!'.endswith('world!')) #Returns True
+
+print('Hello world!'.endswith('world')) #Returns False since we're missing the exclamation point
+
