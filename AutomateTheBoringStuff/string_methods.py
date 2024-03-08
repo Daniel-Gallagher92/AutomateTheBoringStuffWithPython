@@ -44,3 +44,25 @@ print(spam.isupper()) # Returns True since the whole string is uppercase
 print('Hello'.upper()) # Returns 'HELLO'
 
 print('Hello'.upper().isupper()) # Returns True
+
+print()
+# Other "is" methods 
+
+print('hello'.isalpha()) # Returns True
+print('hello123'.isalpha()) #Returns False
+
+print('hello123'.isalnum()) #Returns True
+
+print('23'.isdecimal()) #Returns True
+
+print('   '.isspace()) #Returns True
+
+print('hello world!'.isspace()) #Returns False
+
+#However you can use index to check for spaces
+
+print('hello world!'[5].isspace()) #Returns True
+
+print('This Is Title Case'.istitle()) #Returns True ONLY if EVERY word in string begins with uppercase and is followed by lowercase chars
+
+print('hello world'.title()) # Returns 'Hello World'
