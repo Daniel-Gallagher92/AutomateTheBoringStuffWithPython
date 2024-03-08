@@ -18,16 +18,25 @@ print(spam) # Returns 'hello world!'
 print()
 ### these are helpful when it's necessary to make a case insensitive comparison
 # Think of a game that asks if you want to play again? 
-print('Would you like to play again?')
-answer = input()
+# print('Would you like to play again?')
+# answer = input()
 
-if answer == 'yes': # The program will break unless the user types exactly 'yes' with that exact casing. 
-  print('Playing again')
+# if answer == 'yes': # The program will break unless the user types exactly 'yes' with that exact casing. 
+#   print('Playing again')
 
-print()
+# print()
 
-print('Would you like to play again?')
-answer = input()
+# print('Would you like to play again?')
+# answer = input()
 
-if answer.lower() == 'yes': # Now the program will execute without any issues
-  print('Playing again')
+# if answer.lower() == 'yes': # Now the program will execute without any issues
+#   print('Playing again')
+
+spam = 'hello world!' 
+print(spam.islower()) # Returns True since the whole string is lowercase 
+
+spam = 'Hello world!' 
+print(spam.islower()) # Returns False since even just one letter is uppercase 
+
+spam = 'HELLO WORLD!'
+print(spam.isupper()) # Returns True since the whole string is uppercase 
