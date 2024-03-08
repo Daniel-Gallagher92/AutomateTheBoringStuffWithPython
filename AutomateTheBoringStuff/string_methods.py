@@ -116,3 +116,19 @@ print('hello'.center(20, '-')) # Returns '-------hello--------'
 name = 'Daniel'
 
 print(name.center(20, '_')) # Returns _______Daniel_______
+print()
+
+# strip(), rstrip(), lstrip() 
+
+spam = 'Hello'.rjust(10) #     Hello
+print(spam)
+
+spam = spam.strip() # 'Hello'
+print(spam)
+
+print('     x     '.strip()) # 'x'
+
+print('     x     '.lstrip()) # 'x     '
+print('     x     '.rstrip()) # '     x'
+
+print('SpamSpamBaconSpamEggsSpamSpam'.strip('ampS')) # returns 'BaconSpamEggs'
