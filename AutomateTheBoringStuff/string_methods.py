@@ -79,4 +79,10 @@ print('Hello world'.startswith('ello')) #Returns False
 print('Hello world!'.endswith('world!')) #Returns True
 
 print('Hello world!'.endswith('world')) #Returns False since we're missing the exclamation point
+print()
 
+# join()
+
+print(', '.join(['cats', 'rats', 'bats'])) # Returns 'cats, rats, bats' instead of 'catsratsbats'
+
+print('\n \n'.join(['cats', 'rats', 'bats'])) #prints them on new lines 
