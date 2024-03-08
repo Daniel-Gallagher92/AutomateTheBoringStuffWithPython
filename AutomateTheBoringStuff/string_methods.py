@@ -132,3 +132,12 @@ print('     x     '.lstrip()) # 'x     '
 print('     x     '.rstrip()) # '     x'
 
 print('SpamSpamBaconSpamEggsSpamSpam'.strip('ampS')) # returns 'BaconSpamEggs'
+
+# Please refer to gist if you ever get hung up on this method. 
+# strip will remove all of the given letters on either side UP TO the first letter that WAS NOT given
+
+# replace()
+
+spam = 'Hola amigo!'
+
+print(spam.replace('a', 'XYZ')) # returns 'HolXYZ XYZmigo!'
