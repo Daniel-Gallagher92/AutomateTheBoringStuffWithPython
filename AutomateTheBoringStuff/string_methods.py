@@ -86,3 +86,13 @@ print()
 print(', '.join(['cats', 'rats', 'bats'])) # Returns 'cats, rats, bats' instead of 'catsratsbats'
 
 print('\n \n'.join(['cats', 'rats', 'bats'])) #prints them on new lines 
+
+# split()
+
+print('My name is Daniel'.split()) #Returns ['My', 'name', 'is', 'Daniel']
+
+# it automatically splits it on whitespace characters unless passing it a value
+
+print('My name is Daniel'.split('a')) #Returns ['My n', 'me is D', 'niel']
+
+# note: this will remove the argument that is passed. all a's are now gone
