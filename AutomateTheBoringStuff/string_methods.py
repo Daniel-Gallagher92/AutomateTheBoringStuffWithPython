@@ -148,3 +148,6 @@ import pyperclip
 
 pyperclip.copy('Hello!!!!') # Now try right clicking and pasting and you will see 'Hello!!!!'
 
+# or use the pyperclip paste method
+
+print(pyperclip.paste()) # returns 'Hello!!!!'
