@@ -108,3 +108,11 @@ print('Hello'.ljust(10)) #same effect, but left side has padding to make total l
 # with optional second arg
 
 print('Hello'.ljust(10, '*')) # returns Hello*****
+
+# center() 
+
+print('hello'.center(20, '-')) # Returns '-------hello--------'
+
+name = 'Daniel'
+
+print(name.center(20, '_')) # Returns _______Daniel_______
