@@ -9,3 +9,9 @@ print(spam) # Still prints original string 'hello world!' because strings are im
 spam = spam.upper()
 
 print(spam) # Returns HELLO WORLD! and spam now ONLY contains the uppercase string value
+
+# lower() does the opposite and follow the same rules. 
+
+spam = spam.lower()
+
+print(spam) # Returns 'hello world!'
