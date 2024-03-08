@@ -40,3 +40,7 @@ print(spam.islower()) # Returns False since even just one letter is uppercase
 
 spam = 'HELLO WORLD!'
 print(spam.isupper()) # Returns True since the whole string is uppercase 
+
+print('Hello'.upper()) # Returns 'HELLO'
+
+print('Hello'.upper().isupper()) # Returns True
