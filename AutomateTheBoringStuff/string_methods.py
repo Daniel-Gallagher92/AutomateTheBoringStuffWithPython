@@ -15,3 +15,19 @@ print(spam) # Returns HELLO WORLD! and spam now ONLY contains the uppercase stri
 spam = spam.lower()
 
 print(spam) # Returns 'hello world!'
+print()
+### these are helpful when it's necessary to make a case insensitive comparison
+# Think of a game that asks if you want to play again? 
+print('Would you like to play again?')
+answer = input()
+
+if answer == 'yes': # The program will break unless the user types exactly 'yes' with that exact casing. 
+  print('Playing again')
+
+print()
+
+print('Would you like to play again?')
+answer = input()
+
+if answer.lower() == 'yes': # Now the program will execute without any issues
+  print('Playing again')
