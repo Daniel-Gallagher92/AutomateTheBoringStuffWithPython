@@ -1,9 +1,10 @@
-#! /usr/bin/env python3
+#!/usr/bin/env python3
 
-import time
+import sys
 
-print('Executing script...')
-time.sleep(5)  # Sleep for 5 seconds
-print('Hello world!!!')
+# Access command-line arguments
+arguments = sys.argv[1:]
+print("Command-line arguments:", arguments)
 
+# Your script's main logic goes here
 print('Hello world!!!')
