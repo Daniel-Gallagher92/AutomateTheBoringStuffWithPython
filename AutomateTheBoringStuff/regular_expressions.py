@@ -48,3 +48,11 @@ mo = phoneNumRegex.search(message) #search given string
 print('Phone number found: ' + mo.group()) # Print the pattern
 
 # The above function will ONLY return the FIRST match found
+
+# The Below function uses shorthand regex
+# instead of typing '\d' so many times, you can use curly braces to tell it how many chars to look for
+
+phoneNumRegex = re.compile(r'\d{3}-\d{3}-\d{4}') # look for this pattern of text and compile will return this as a regex object
+print(phoneNumRegex.findall(message)) # Print the pattern
+
+# The above function will return all matches found as a list:  ['407-555-8989', '407-555-1234']
