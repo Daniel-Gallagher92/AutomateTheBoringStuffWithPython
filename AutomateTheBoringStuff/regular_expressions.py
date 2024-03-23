@@ -1,3 +1,5 @@
+import re
+
 # Non regex example of finding a phone number
 
 def isPhoneNumber(text):
@@ -36,3 +38,13 @@ if not foundNumber:
   # The above function returns:
     # Phone number found: 407-555-8989
     # Phone number found: 407-555-1234
+  
+# same thing using regex
+  
+message = 'Call me at 407-555-8989 tomorrow, or 407-555-1234 for my office line.'
+
+phoneNumRegex = re.compile(r'\d\d\d-\d\d\d-\d\d\d\d') # look for this pattern of text and compile will return this as a regex object
+mo = phoneNumRegex.search(message) #search given string
+print('Phone number found: ' + mo.group()) # Print the pattern
+
+# The above function will ONLY return the FIRST match found
