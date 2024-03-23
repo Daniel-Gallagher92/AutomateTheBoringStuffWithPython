@@ -20,3 +20,19 @@ def isPhoneNumber(text):
 
 print(isPhoneNumber('407-555-1234')) # returns True
 print(isPhoneNumber('hello')) # returns False
+
+# Finding a phone number inside of a longer string WITHOUT regex 
+
+message = 'Call me at 407-555-8989 tomorrow, or 407-555-1234 for my office line.'
+foundNumber = False #will set true when number is found
+for i in range(len(message)):
+  chunk = message[i:i+12]
+  if isPhoneNumber(chunk):
+    print('Phone number found: ' + chunk)
+    foundNumber = True
+if not foundNumber:
+  print('Could not find any phone numbers') 
+
+  # The above function returns:
+    # Phone number found: 407-555-8989
+    # Phone number found: 407-555-1234
