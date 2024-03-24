@@ -70,3 +70,9 @@ print(mo.group(2)) # returns the main phone number without area code
 phoneNumRegex = re.compile(r'\(\d{3}\) \d{3}-\d{4}')
 mo = phoneNumRegex.search('Call me at (407) 555-9000 tomorrow.')
 print(mo.group())
+
+# Matching several patterns with the pipe character
+
+batRegex = re.compile(r'Bat(man|mobile|copter|bat)')
+mo = batRegex.search('Batmobile lost a wheel')
+print(mo.group()) # returns Batmobile
