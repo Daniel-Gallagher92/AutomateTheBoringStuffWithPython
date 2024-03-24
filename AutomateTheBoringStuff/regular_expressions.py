@@ -61,4 +61,5 @@ print(phoneNumRegex.findall(message)) # Print the pattern
 
 phoneNumRegex = re.compile(r'(\d\d\d)-(\d\d\d-\d\d\d\d)')
 mo = phoneNumRegex.search('Call me at 407-555-9000 tomorrow.')
-print(mo.group())
+print(mo.group()) # returns full phone number match object
+print(mo.group(1)) # returns just the area code, aka group 1 
