@@ -76,3 +76,4 @@ print(mo.group())
 batRegex = re.compile(r'Bat(man|mobile|copter|bat)')
 mo = batRegex.search('Batmobile lost a wheel')
 print(mo.group()) # returns Batmobile
+print(mo.group(1)) # returns mobile to tell us which suffix was found.
