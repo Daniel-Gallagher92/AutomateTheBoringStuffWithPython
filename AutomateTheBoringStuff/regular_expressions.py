@@ -64,3 +64,9 @@ mo = phoneNumRegex.search('Call me at 407-555-9000 tomorrow.')
 print(mo.group()) # returns full phone number match object
 print(mo.group(1)) # returns just the area code, aka group 1 
 print(mo.group(2)) # returns the main phone number without area code 
+
+# Looking for literal parenthesis with escape chars in raw strings
+
+phoneNumRegex = re.compile(r'\(\d{3}\) \d{3}-\d{4}')
+mo = phoneNumRegex.search('Call me at (407) 555-9000 tomorrow.')
+print(mo.group())
