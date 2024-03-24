@@ -56,3 +56,9 @@ phoneNumRegex = re.compile(r'\d{3}-\d{3}-\d{4}') # look for this pattern of text
 print(phoneNumRegex.findall(message)) # Print the pattern
 
 # The above function will return all matches found as a list:  ['407-555-8989', '407-555-1234']
+
+# Grouping with parenthesis 
+
+phoneNumRegex = re.compile(r'(\d\d\d)-(\d\d\d-\d\d\d\d)')
+mo = phoneNumRegex.search('Call me at 407-555-9000 tomorrow.')
+print(mo.group())
