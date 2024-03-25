@@ -55,3 +55,9 @@ print(mo.group()) # returns Batwowowowowowoman since (wo) appears one or more ti
 regex = re.compile(r'\+\*\?')
 mo = regex.search('I learned about +*? regex syntax')
 print(mo.group()) # returns +*? since we're using escape chars to search for literal symbols
+
+# with grouping
+
+regex = re.compile(r'(\+\*\?)+') # searching with group and plus character to ensure pattern appears one or more times. Mandatory! 
+mo = regex.search('I learned about +*?+*?+*?+*?+*?+*? regex syntax')
+print(mo.group()) # returns +*?+*?+*?+*?+*?+*? 
