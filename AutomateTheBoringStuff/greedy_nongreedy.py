@@ -61,3 +61,7 @@ print(mo.group()) # returns +*? since we're using escape chars to search for lit
 regex = re.compile(r'(\+\*\?)+') # searching with group and plus character to ensure pattern appears one or more times. Mandatory! 
 mo = regex.search('I learned about +*?+*?+*?+*?+*?+*? regex syntax')
 print(mo.group()) # returns +*?+*?+*?+*?+*?+*? 
+
+haRegex = re.compile(r'(ha){3}')
+mo = haRegex.search('That was a good joke hahaha')
+print(mo.group()) # returns hahaha since ha actually occurs 3 times 
