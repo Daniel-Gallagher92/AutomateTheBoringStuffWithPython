@@ -62,6 +62,9 @@ regex = re.compile(r'(\+\*\?)+') # searching with group and plus character to en
 mo = regex.search('I learned about +*?+*?+*?+*?+*?+*? regex syntax')
 print(mo.group()) # returns +*?+*?+*?+*?+*?+*? 
 
-haRegex = re.compile(r'(ha){3}')
+# {x} (exactly x number of times)
+
+haRegex = re.compile(r'(ha){3}') # searching for the pattern of the string 'ha' exactly 3 times
 mo = haRegex.search('That was a good joke hahaha')
 print(mo.group()) # returns hahaha since ha actually occurs 3 times 
+
