@@ -37,3 +37,15 @@ print(mo.group()) # returns Batwowowowowoman
 
 # + plus character (one or more)
 
+batRegex = re.compile(r'Bat(wo)+man')
+mo = batRegex.search('The Adventures of Batman')
+print(batRegex.search('The Adventures of Batman') == None) # returns true since batwoman was required and NOT present.
+
+batRegex = re.compile(r'Bat(wo)+man')
+mo = batRegex.search('The Adventures of Batwoman')
+print(mo.group()) # returns Batwoman 
+
+batRegex = re.compile(r'Bat(wo)+man')
+mo = batRegex.search('The Adventures of Batwowowowowowoman')
+print(mo.group()) # returns Batwowowowowowoman since (wo) appears one or more times
+
