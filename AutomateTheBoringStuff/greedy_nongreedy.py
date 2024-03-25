@@ -83,3 +83,10 @@ print(mo.group())
 haRegex = re.compile(r'(ha){3,5}') # searching for the pattern of the string 'ha' 3 - 5 times
 mo = haRegex.search('That was a good joke hahahahaha')
 print(mo.group())
+
+digitRegex = re.compile(r'\d{3,5}')
+mo = digitRegex.search('1234567890')
+print(mo.group()) # returns 12345 because python will always use GREEDY matching by default. 
+# python regex starts recognizing patterns as soon as possible. It will always return from the first to max match 
+# Greedy matches match the longest possible string that will match the given pattern.
+
