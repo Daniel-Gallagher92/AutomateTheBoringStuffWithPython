@@ -73,3 +73,4 @@ phoneRegex = re.compile(r'(\d\d\d-)?\d\d\d-\d\d\d\d') #searching for single phon
 phoneRegex = re.compile(r'((\d\d\d-)?\d\d\d-\d\d\d\d(,)?( )?){3}') #searching for 3 phone numbers, with optional area code and with optional comma separating them and with an optional space
 mo = phoneRegex.search('My phone numbers are 407-444-1234, 555-6262, 214-678-1234')
 print(mo.group()) # returns 407-444-1234, 555-6262, 214-678-1234
+
