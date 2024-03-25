@@ -74,3 +74,12 @@ phoneRegex = re.compile(r'((\d\d\d-)?\d\d\d-\d\d\d\d(,)?( )?){3}') #searching fo
 mo = phoneRegex.search('My phone numbers are 407-444-1234, 555-6262, 214-678-1234')
 print(mo.group()) # returns 407-444-1234, 555-6262, 214-678-1234
 
+# matching a range of possible repetitions
+
+haRegex = re.compile(r'(ha){3,5}') # searching for the pattern of the string 'ha' 3 - 5  times
+mo = haRegex.search('That was a good joke hahahaha')
+print(mo.group())
+
+haRegex = re.compile(r'(ha){3,5}') # searching for the pattern of the string 'ha' 3 - 5 times
+mo = haRegex.search('That was a good joke hahahahaha')
+print(mo.group())
