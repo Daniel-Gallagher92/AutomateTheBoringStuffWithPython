@@ -49,3 +49,9 @@ batRegex = re.compile(r'Bat(wo)+man')
 mo = batRegex.search('The Adventures of Batwowowowowowoman')
 print(mo.group()) # returns Batwowowowowowoman since (wo) appears one or more times
 
+
+# Escaping characters in RegEx
+
+regex = re.compile(r'\+\*\?')
+mo = regex.search('I learned about +*? regex syntax')
+print(mo.group()) # returns +*? since we're using escape chars to search for literal symbols
