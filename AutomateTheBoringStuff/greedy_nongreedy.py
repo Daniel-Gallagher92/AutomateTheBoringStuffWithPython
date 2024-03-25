@@ -90,3 +90,7 @@ print(mo.group()) # returns 12345 because python will always use GREEDY matching
 # python regex starts recognizing patterns as soon as possible. It will always return from the first to max match 
 # Greedy matches match the longest possible string that will match the given pattern.
 
+digitRegex = re.compile(r'\d{3,5}?') # the question mark following curly braces returns NON-GREEDY match
+mo = digitRegex.search('1234567890')
+print(mo.group()) # returns 123 because that is the minimum value given in our range
+
