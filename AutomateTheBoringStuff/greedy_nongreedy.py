@@ -68,3 +68,8 @@ haRegex = re.compile(r'(ha){3}') # searching for the pattern of the string 'ha' 
 mo = haRegex.search('That was a good joke hahaha')
 print(mo.group()) # returns hahaha since ha actually occurs 3 times 
 
+phoneRegex = re.compile(r'(\d\d\d-)?\d\d\d-\d\d\d\d') #searching for single phone number with or without area code
+
+phoneRegex = re.compile(r'((\d\d\d-)?\d\d\d-\d\d\d\d(,)?( )?){3}') #searching for 3 phone numbers, with optional area code and with optional comma separating them and with an optional space
+mo = phoneRegex.search('My phone numbers are 407-444-1234, 555-6262, 214-678-1234')
+print(mo.group()) # returns 407-444-1234, 555-6262, 214-678-1234
