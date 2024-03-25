@@ -19,3 +19,21 @@ print(mo.group()) # returns 415-555-1234
 phoneRegex = re.compile(r'(\d\d\d-)?\d\d\d-\d\d\d\d') # make sure you include the dash from the area code in your optional search, or else Nonetype error occurs
 mo = phoneRegex.search('My phone number is 555-1234. Call me tomorrow')
 print(mo.group()) # returns 555-1234
+
+
+# * asterisk character (zero or more) 
+
+batRegex = re.compile(r'Bat(wo)*man') # the star goes where the question mark was and will match the given pattern more than once time like the question mark
+mo = batRegex.search('The Adventures of Batman')
+print(mo.group()) # returns Batman
+
+batRegex = re.compile(r'Bat(wo)*man')
+mo = batRegex.search('The Adventures of Batwoman')
+print(mo.group()) # returns Batwoman
+
+batRegex = re.compile(r'Bat(wo)*man')
+mo = batRegex.search('The Adventures of Batwowowowowoman')
+print(mo.group()) # returns Batwowowowowoman
+
+# + plus character (one or more)
+
