@@ -21,6 +21,11 @@ matchedObject = xmasRegex.findall(lyrics)
 
 print(matchedObject)
 
+# Creating your own custom regex using square bracket syntax 
+
+# Note that inside the square brackets, the normal regular expression symbols are not interpreted as such.
+# This means you do not need to escape the ., *, ?, or () characters with a preceding backslash.
+
 vowelRegex = re.compile(r'[aeiouAEIOU]')
 
 matchedObject = vowelRegex.findall('Robocop eats babyfood')
