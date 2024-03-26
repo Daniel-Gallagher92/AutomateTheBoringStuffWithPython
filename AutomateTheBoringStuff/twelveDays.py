@@ -20,3 +20,9 @@ xmasRegex = re.compile(r'\d+\s\w+') # \d for numeric digits 0-9, \s for space, \
 matchedObject = xmasRegex.findall(lyrics)
 
 print(matchedObject)
+
+vowelRegex = re.compile(r'[aeiouAEIOU]')
+
+matchedObject = vowelRegex.findall('Robocop eats babyfood')
+
+print(matchedObject) # returns ['o', 'o', 'o', 'e', 'a', 'a', 'o', 'o']
