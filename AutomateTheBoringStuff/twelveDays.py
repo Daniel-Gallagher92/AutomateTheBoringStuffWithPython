@@ -40,3 +40,13 @@ vowelRegex = re.compile(r'[aeiouAEIOU]{2}') # add curly brace with x num of sequ
 matchedObject = vowelRegex.findall('Robocop eats babyfood')
 
 print(matchedObject) # returns ['ea', 'oo'] from 'eats babyfood' 
+
+# negative character classes
+
+# now we search for everything that is NOT a vowel including punctuation marks, spaces and digits
+
+consonantsRegex = re.compile(r'[^aeiouAEIOU]') # Note the caret char immediately after opening square bracket
+
+matchedObject = consonantsRegex.findall('Robocop eats babyfood')
+
+print(matchedObject) # returns ['R', 'b', 'c', 'p', ' ', 't', 's', ' ', 'b', 'b', 'y', 'f', 'd'] aka everything that is NOT a vowel
