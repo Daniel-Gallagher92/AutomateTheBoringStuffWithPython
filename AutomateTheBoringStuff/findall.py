@@ -1,5 +1,8 @@
 import re #whenever you anticipate working with regular expressions, just import immediately 
 
+
+# zero or one groups with findall()
+
 phoneRegex = re.compile(r'\(\d{3}\) \d{3}-\d{4}')
 
 clientNumbers = '''David R (795) 652-7267,
@@ -14,3 +17,5 @@ Shaggy D (301) 353-4748'''
 matchedNumbers = phoneRegex.findall(clientNumbers)
 
 print(matchedNumbers)
+
+# Two or more groups with findall()
