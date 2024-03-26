@@ -19,3 +19,10 @@ matchedNumbers = phoneRegex.findall(clientNumbers)
 print(matchedNumbers)
 
 # Two or more groups with findall()
+
+phoneRegex = re.compile(r'\((\d{3})\) (\d{3}-\d{4})')
+
+matchedNumbers = phoneRegex.findall(clientNumbers)
+
+print()
+print(matchedNumbers)
