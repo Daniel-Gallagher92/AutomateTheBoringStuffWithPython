@@ -16,6 +16,7 @@ Shaggy D (301) 353-4748'''
 
 matchedNumbers = phoneRegex.findall(clientNumbers)
 
+print('Zero or One group return a list of strings')
 print(matchedNumbers)
 
 # Two or more groups with findall()
@@ -25,4 +26,5 @@ phoneRegex = re.compile(r'\((\d{3})\) (\d{3}-\d{4})')
 matchedNumbers = phoneRegex.findall(clientNumbers)
 
 print()
+print('Two or more groups return a list of tuples with string values inside')
 print(matchedNumbers)
