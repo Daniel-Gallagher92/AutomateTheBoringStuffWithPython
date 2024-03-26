@@ -31,3 +31,12 @@ vowelRegex = re.compile(r'[aeiouAEIOU]')
 matchedObject = vowelRegex.findall('Robocop eats babyfood')
 
 print(matchedObject) # returns ['o', 'o', 'o', 'e', 'a', 'a', 'o', 'o']
+
+
+# matching two characters in a row with curly brace syntax 
+
+vowelRegex = re.compile(r'[aeiouAEIOU]{2}') # add curly brace with x num of sequential occurrences to search for
+
+matchedObject = vowelRegex.findall('Robocop eats babyfood')
+
+print(matchedObject) # returns ['ea', 'oo'] from 'eats babyfood' 
