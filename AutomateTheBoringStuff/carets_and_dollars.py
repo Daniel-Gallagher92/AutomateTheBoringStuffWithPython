@@ -52,3 +52,7 @@ serve = '<To serve humans> for dinner.>'
 nongreedy = re.compile(r'<(.*?)>')
 matchList = nongreedy.findall(serve)
 print(matchList) # returns ['To serve humans'] since we match the <> chars, we fulfill requirements even if there is another > char later on
+
+greedy = re.compile(r'<(.*)>')
+matchList = greedy.findall(serve)
+print(matchList) # returns ['To serve humans> for dinner.'] since another > char occurs at the end
