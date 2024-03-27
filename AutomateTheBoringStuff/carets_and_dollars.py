@@ -72,3 +72,11 @@ print(mo.group())  # returns Serve the public trust.
                            # Uphold the law.
 
 # using the re.DOTALL second arg truly tells the dot char to accept ALL chars including newline chars
+
+
+# case insensitive search using re.IGNORECASE or re.I for short
+
+vowelRegex = re.compile(r'[aeiou]', re.I) # instead of typing out [aeiouAEIOU] to match upper and lower case
+matchList = vowelRegex.findall('Al, why does your programming book talk about Robocop so much?')
+print(matchList) # returns ['A', 'o', 'e', 'o', 'u', 'o', 'a', 'i', 'o', 'o', 'a', 'a', 'o', 'u', 'o', 'o', 'o', 'o', 'u'] 
+# note the capital A the was included 
