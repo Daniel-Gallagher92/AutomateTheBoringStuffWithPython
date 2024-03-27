@@ -44,3 +44,11 @@ print(matchList) # returns [' cat', ' hat', ' sat', 'flat', ' mat'] note we pick
 nameRegex = re.compile(r'First Name: (.*) Last Name: (.*)')
 matchList = nameRegex.findall('First Name: Daniel Last Name: Gallagher')
 print(matchList) # returns tuple [('Daniel', 'Gallagher')] since we have 2 or more groups
+
+
+# greedy and non-greedy matching with .* and .*?
+
+serve = '<To serve humans> for dinner.>'
+nongreedy = re.compile(r'<(.*?)>')
+matchList = nongreedy.findall(serve)
+print(matchList) # returns ['To serve humans'] since we match the <> chars, we fulfill requirements even if there is another > char later on
