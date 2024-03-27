@@ -32,3 +32,7 @@ print(allDigitsRegex.search('123456787xyz6543245') == None) # returns True since
 atRegex = re.compile(r'.at')
 matchList = atRegex.findall('The cat in the hat sat on a flat mat')
 print(matchList) # returns ['cat', 'hat', 'sat', 'lat', 'mat'] since the words end with at and can begin with anything
+
+atRegexWithRange = re.compile(r'.{1,2}at') # note the use of range stating that we may match one or two characters proceeding 'at' wildcard 
+matchList = atRegexWithRange.findall('The cat in the hat sat on a flat mat')
+print(matchList) # returns [' cat', ' hat', ' sat', 'flat', ' mat'] note we picked up the 'f' on flat, and the other 3 letter words, some whitespace characters
