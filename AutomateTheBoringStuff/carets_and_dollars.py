@@ -26,3 +26,9 @@ mo = allDigitsRegex.search('1234567876543245')
 print(mo.group()) # returns 1234567876543245 since the string is all uninterrupted digit characters
 
 print(allDigitsRegex.search('123456787xyz6543245') == None) # returns True since the entire string is NOT digits
+
+# wildcard regex character ( . )
+
+atRegex = re.compile(r'.at')
+matchList = atRegex.findall('The cat in the hat sat on a flat mat')
+print(matchList) # returns ['cat', 'hat', 'sat', 'lat', 'mat'] since the words end with at and can begin with anything
