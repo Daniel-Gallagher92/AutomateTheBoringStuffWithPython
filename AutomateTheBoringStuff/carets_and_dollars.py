@@ -56,3 +56,10 @@ print(matchList) # returns ['To serve humans'] since we match the <> chars, we f
 greedy = re.compile(r'<(.*)>')
 matchList = greedy.findall(serve)
 print(matchList) # returns ['To serve humans> for dinner.'] since another > char occurs at the end
+
+# matching EVERYTHING with re.DOTALL second arg
+
+prime = 'Serve the public trust.\nProtect the innocent.\nUphold the law.'
+dotStar = re.compile(r'.*')
+mo = dotStar.search(prime)
+print(mo.group()) # Only returns Serve the public trust. since .* alone cannot pick up on newline char
