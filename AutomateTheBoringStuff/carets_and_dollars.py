@@ -20,3 +20,9 @@ matchedObject = endsWithWorldRegex.search('Hello world!')
 print(matchedObject) # returns <re.Match object; span=(6, 12), match='world!'> 
 
 print(endsWithWorldRegex.search('Hello worldasdasdasdasd!') == None)  # returns True since the string does NOT END with world
+
+allDigitsRegex = re.compile(r'^\d+$')
+mo = allDigitsRegex.search('1234567876543245')
+print(mo.group()) # returns 1234567876543245 since the string is all uninterrupted digit characters
+
+print(allDigitsRegex.search('123456787xyz6543245') == None) # returns True since the entire string is NOT digits
