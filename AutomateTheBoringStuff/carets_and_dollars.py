@@ -63,3 +63,12 @@ prime = 'Serve the public trust.\nProtect the innocent.\nUphold the law.'
 dotStar = re.compile(r'.*')
 mo = dotStar.search(prime)
 print(mo.group()) # Only returns Serve the public trust. since .* alone cannot pick up on newline char
+
+prime = 'Serve the public trust.\nProtect the innocent.\nUphold the law.'
+dotStar = re.compile(r'.*', re.DOTALL) # note the second arg re.DOTALL
+mo = dotStar.search(prime)
+print(mo.group())  # returns Serve the public trust.
+                           # Protect the innocent.
+                           # Uphold the law.
+
+# using the re.DOTALL second arg truly tells the dot char to accept ALL chars including newline chars
