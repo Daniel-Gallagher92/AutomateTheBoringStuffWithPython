@@ -36,3 +36,11 @@ print(matchList) # returns ['cat', 'hat', 'sat', 'lat', 'mat'] since the words e
 atRegexWithRange = re.compile(r'.{1,2}at') # note the use of range stating that we may match one or two characters proceeding 'at' wildcard 
 matchList = atRegexWithRange.findall('The cat in the hat sat on a flat mat')
 print(matchList) # returns [' cat', ' hat', ' sat', 'flat', ' mat'] note we picked up the 'f' on flat, and the other 3 letter words, some whitespace characters
+
+
+
+# Matching everything with dot star pattern .*
+
+nameRegex = re.compile(r'First Name: (.*) Last Name: (.*)')
+matchList = nameRegex.findall('First Name: Daniel Last Name: Gallagher')
+print(matchList) # returns tuple [('Daniel', 'Gallagher')] since we have 2 or more groups
