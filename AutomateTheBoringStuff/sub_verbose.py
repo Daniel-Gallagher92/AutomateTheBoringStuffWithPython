@@ -25,3 +25,18 @@ mo = namesRegex.sub(r'Agent \1******', 'Agent Alice gave the secret documents to
 
 
 print(mo) # returns Agent A****** gave the secret documents to Agent B******
+
+
+# Managing complex regex with multiline string and re.VERBOSE second arg
+
+phoneRegex = re.compile(r'''
+(\d\d\d-)|    # Area code without parens, but with a dash
+(\(\d\d\d\) ) # |or area code WITH parens and WITHOUt a dash 
+(\d\d\d)      # first three digits
+-             # dash in main phone number
+(\d\d\d\d)    # last four digits in main phone number
+\sx\d{2,4}    # if there is an extension, we can match a space followed by 'x' and a number of digits between 2 and 4 chars
+''', re.VERBOSE) # this argument is what allows us to make notes on a multiline string for managing complicated regex 
+
+
+# note how much easier it is to break down and make notes on complicated regex patterns. 
