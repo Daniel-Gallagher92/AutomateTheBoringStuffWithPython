@@ -19,6 +19,7 @@ phoneRegex = re.compile(r'''
 
 
 # create regex for email addresses 
+
 emailRegex = re.compile(r'''
 # some.+_thing@(\d{2,5}))?.com
 
@@ -29,6 +30,7 @@ emailRegex = re.compile(r'''
 
 
 # get the text off of the clipboard
+
 text = pyperclip.paste()
 
 # extract email and phone num's
@@ -39,8 +41,9 @@ allPhoneNumbers = []
 for phoneNumber in extractedPhone:
   allPhoneNumbers.append(phoneNumber[0]) # adds every FIRST string (full phone num) from the tuple
 
-print(allPhoneNumbers)
-# print(extractedEmail)
 
-# todo: copy extracted phone nums and emails to clipboard 
+# copy extracted phone nums and emails to clipboard 
+
+results = '\n'.join(allPhoneNumbers) + '\n' + '\n'.join(extractedEmail)
+pyperclip.copy(results)
 
