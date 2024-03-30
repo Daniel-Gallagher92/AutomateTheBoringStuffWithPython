@@ -28,6 +28,15 @@ emailRegex = re.compile(r'''
 ''',re.VERBOSE)
 
 
+# get the text off of the clipboard
+text = pyperclip.paste()
+
+# extract email and phone num's
+extractedPhone = phoneRegex.findall(text)
+extractedEmail = emailRegex.findall(text)
+
+print(extractedPhone)
+print(extractedEmail)
 
 # todo: copy extracted phone nums and emails to clipboard 
 
