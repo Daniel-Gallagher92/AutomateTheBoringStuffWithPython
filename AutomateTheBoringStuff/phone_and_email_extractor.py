@@ -6,7 +6,7 @@ import pyperclip, re
 
 phoneRegex = re.compile(r''' 
 # 415-555-1234, 515,1234, (415) 555-1234, 555-0000 ext 12345,  555-0000 ext. 12345, ext. 12345, x12345
-
+(
 ((\d\d\d)|(\(\d\d\d\)))? # area code (optional)
 (\s|-)              # seperator
 \d\d\d              # first three digits
@@ -14,14 +14,20 @@ phoneRegex = re.compile(r'''
 \d\d\d\d            # last four digits 
 (((ext(\.)?\s)|x)   # extension word-part (optional)
   (\d{2,5}))?       # extension number part (optional)
+)
 ''', re.VERBOSE)
 
 
-# todo: create regex for email addresses 
+# create regex for email addresses 
+emailRegex = re.compile(r'''
+# some.+_thing@(\d{2,5}))?.com
 
-# todo: get the text off of the clipboard
+[a-zA-Z0-9_.+]+          # name part
+@                        # @ symbol
+[a-zA-Z0-9_.+]+          # domain name part
+''',re.VERBOSE)
 
-# todo: extract email and phone num's
+
 
 # todo: copy extracted phone nums and emails to clipboard 
 
