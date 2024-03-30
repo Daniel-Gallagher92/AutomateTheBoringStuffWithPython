@@ -2,8 +2,9 @@
 
 import pyperclip, re
 
+# create regex for phone numbers
 
-re.compile(r''' 
+phoneRegex = re.compile(r''' 
 # 415-555-1234, 515,1234, (415) 555-1234, 555-0000 ext 12345,  555-0000 ext. 12345, ext. 12345, x12345
 
 ((\d\d\d)|(\(\d\d\d\)))? # area code (optional)
