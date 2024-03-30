@@ -32,11 +32,15 @@ emailRegex = re.compile(r'''
 text = pyperclip.paste()
 
 # extract email and phone num's
-extractedPhone = phoneRegex.findall(text)
+extractedPhone = phoneRegex.findall(text) # every FIRST string in tuple is entire phone number
 extractedEmail = emailRegex.findall(text)
 
-print(extractedPhone)
-print(extractedEmail)
+allPhoneNumbers = []
+for phoneNumber in extractedPhone:
+  allPhoneNumbers.append(phoneNumber[0]) # adds every FIRST string (full phone num) from the tuple
+
+print(allPhoneNumbers)
+# print(extractedEmail)
 
 # todo: copy extracted phone nums and emails to clipboard 
 
