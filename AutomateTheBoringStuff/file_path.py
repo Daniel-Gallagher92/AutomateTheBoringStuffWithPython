@@ -28,3 +28,6 @@ print(os.path.relpath('/Users/danielgallagher/python/automate_the_boring_stuff/A
 
 print(os.path.dirname('/Users/danielgallagher/python/automate_the_boring_stuff/AutomateTheBoringStuffWithPython/AutomateTheBoringStuff/file_path.py'))
 # returns only directories, no filenames --> /Users/danielgallagher/python/automate_the_boring_stuff/AutomateTheBoringStuffWithPython/AutomateTheBoringStuff
+
+print(os.path.basename('/Users/danielgallagher/python/automate_the_boring_stuff/AutomateTheBoringStuffWithPython/AutomateTheBoringStuff/file_path.py'))
+# returns file_path.py aka only the base filename 
