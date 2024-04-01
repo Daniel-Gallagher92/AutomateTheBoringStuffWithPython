@@ -31,3 +31,9 @@ print(os.path.dirname('/Users/danielgallagher/python/automate_the_boring_stuff/A
 
 print(os.path.basename('/Users/danielgallagher/python/automate_the_boring_stuff/AutomateTheBoringStuffWithPython/AutomateTheBoringStuff/file_path.py'))
 # returns file_path.py aka only the base filename 
+
+print(os.path.exists('/Users/danielgallagher/python/automate_the_boring_stuff/AutomateTheBoringStuffWithPython/AutomateTheBoringStuff/file_path.py'))
+# returns True
+
+print(os.path.exists('/Users/danielgallagher/python/automate_the_boring_stuff/AutomateTheBoringStuffWithPython/AutomateTheBoringStuff/vile_path.py'))
+# returns False
