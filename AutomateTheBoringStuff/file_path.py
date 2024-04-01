@@ -21,3 +21,7 @@ print(os.path.abspath('file_path.py')) # returns absolute path of relative file 
 
 print(os.path.isabs('AutomateTheBoringStuffWithPython/AutomateTheBoringStuff/file_path.py')) # returns False
 # isabs returns boolean value answering if the path passed is indeed an absolute path or not.
+
+print(os.path.relpath('/Users/danielgallagher/python/automate_the_boring_stuff/AutomateTheBoringStuffWithPython/AutomateTheBoringStuff/file_path.py', '/Users/danielgallagher/python'))
+# the second arg says "this is the directory we're currently in"
+# returns automate_the_boring_stuff/AutomateTheBoringStuffWithPython/AutomateTheBoringStuff/file_path.py
