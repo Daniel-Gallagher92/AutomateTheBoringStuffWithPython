@@ -65,3 +65,24 @@ for filename in os.listdir('/Users/danielgallagher/python/automate_the_boring_st
   totalSize = totalSize + os.path.getsize(os.path.join('/Users/danielgallagher/python/automate_the_boring_stuff/AutomateTheBoringStuffWithPython/AutomateTheBoringStuff', filename))
 
 print(totalSize) # returns 399775 bytes 
+
+# os.makedirs() will create folders. You can pass nested folders to create multiples.
+# You can pass absolute OR relative path
+
+# newDirectory = os.makedirs('/Users/danielgallagher/python/automate_the_boring_stuff/AutomateTheBoringStuffWithPython/AutomateTheBoringStuff/MakeDirsExample')
+# the above line indeed makes a new directory, however is commented out to prevent it from 
+# raising an error since it attempts to create the same directory every time
+
+# BELOW I created a little workaround to prevent program from breaking 
+
+directory = '/Users/danielgallagher/python/automate_the_boring_stuff/AutomateTheBoringStuffWithPython/AutomateTheBoringStuff/MakeDirsExample'
+
+try:
+    os.makedirs(directory)
+except FileExistsError:
+    print(f"Directory '{directory}' already exists.")
+    
+print(os.path.abspath(directory))
+
+# returns Directory '/Users/danielgallagher/python/automate_the_boring_stuff/AutomateTheBoringStuffWithPython/AutomateTheBoringStuff/MakeDirsExample' already exists.
+# /Users/danielgallagher/python/automate_the_boring_stuff/AutomateTheBoringStuffWithPython/AutomateTheBoringStuff/MakeDirsExample
