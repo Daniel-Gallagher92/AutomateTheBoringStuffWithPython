@@ -18,3 +18,6 @@ print(os.getcwd()) # returns /Users/danielgallagher/python/automate_the_boring_s
 
 print(os.path.abspath('file_path.py')) # returns absolute path of relative file passed in.
 # /Users/danielgallagher/python/automate_the_boring_stuff/AutomateTheBoringStuffWithPython/AutomateTheBoringStuff/file_path.py
+
+print(os.path.isabs('AutomateTheBoringStuffWithPython/AutomateTheBoringStuff/file_path.py')) # returns False
+# isabs returns boolean value answering if the path passed is indeed an absolute path or not.
