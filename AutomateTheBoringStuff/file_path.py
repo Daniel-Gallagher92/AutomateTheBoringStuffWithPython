@@ -37,3 +37,11 @@ print(os.path.exists('/Users/danielgallagher/python/automate_the_boring_stuff/Au
 
 print(os.path.exists('/Users/danielgallagher/python/automate_the_boring_stuff/AutomateTheBoringStuffWithPython/AutomateTheBoringStuff/vile_path.py'))
 # returns False
+
+print(os.path.isfile('file_path.py')) # returns True
+
+print(os.path.isdir('file_path.py')) # returns False 
+
+print(os.path.isdir('/Users/danielgallagher/python/automate_the_boring_stuff/')) # returns True 
+
+print(os.path.getsize('file_path.py')) # returns 2656 and this number is measured in bytes
