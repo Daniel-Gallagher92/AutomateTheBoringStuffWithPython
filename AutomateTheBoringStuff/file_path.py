@@ -50,3 +50,18 @@ print(os.listdir('/Users/danielgallagher/python/automate_the_boring_stuff/Automa
 # returns a list of directories inside of passed arg file path. 
 # Think of this as using ls in your terminal 
 # returns ['carets_and_dollars.py', 'list_methods.py', 'while_loops.py', 'similarities.py', 'for_loops.py', 'hello_world.py', 'lists.py', 'python_scripts.py', 'for_loops_with_lists.py', 'guessing_game.py', 'phone_and_email_extractor.py', 'greedy_nongreedy.py', 'flow_control.py', 'advanced_string_syntax.py', 'sub_verbose.py', 'my_python_scripts.sh', 'twelveDays.py', 'writing_your_own_functions.py', 'dictionaries.py', 'try_and_except.py', 'sysexit.py', 'data_structures.py', 'python_scripts.sh', 'string_formatting.py', 'character_counting.py', 'file_path.py', 'regular_expressions.py', 'string_methods.py', 'if_else_elif.py', 'dry_guessing_game.py', 'findall.py', 'scope.py']
+
+
+# Finding the size of ALL folders in a folder 
+
+totalSize = 0 
+
+for filename in os.listdir('/Users/danielgallagher/python/automate_the_boring_stuff/AutomateTheBoringStuffWithPython/AutomateTheBoringStuff'):
+  if not os.path.isfile(os.path.join('/Users/danielgallagher/python/automate_the_boring_stuff/AutomateTheBoringStuffWithPython/AutomateTheBoringStuff', filename)):
+        # above, we use join to join the filepath with the loop variable filename and
+        # check if it is or is NOT a file, so we know to check and add the size to totalSize var
+        # or just continue past to avoid breaking the program
+        continue
+  totalSize = totalSize + os.path.getsize(os.path.join('/Users/danielgallagher/python/automate_the_boring_stuff/AutomateTheBoringStuffWithPython/AutomateTheBoringStuff', filename))
+
+print(totalSize) # returns 399775 bytes 
