@@ -25,3 +25,6 @@ print(os.path.isabs('AutomateTheBoringStuffWithPython/AutomateTheBoringStuff/fil
 print(os.path.relpath('/Users/danielgallagher/python/automate_the_boring_stuff/AutomateTheBoringStuffWithPython/AutomateTheBoringStuff/file_path.py', '/Users/danielgallagher/python'))
 # the second arg says "this is the directory we're currently in"
 # returns automate_the_boring_stuff/AutomateTheBoringStuffWithPython/AutomateTheBoringStuff/file_path.py
+
+print(os.path.dirname('/Users/danielgallagher/python/automate_the_boring_stuff/AutomateTheBoringStuffWithPython/AutomateTheBoringStuff/file_path.py'))
+# returns only directories, no filenames --> /Users/danielgallagher/python/automate_the_boring_stuff/AutomateTheBoringStuffWithPython/AutomateTheBoringStuff
