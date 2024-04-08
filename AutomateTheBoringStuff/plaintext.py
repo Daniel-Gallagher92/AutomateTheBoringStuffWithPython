@@ -75,3 +75,21 @@ except Exception as e:
     print(f"An error occurred: {e}")
 
     # Returns Content has been successfully appended to the file.
+
+# write method to pass an arg to be written to file
+    
+helloFile = open('/Users/danielgallagher/hello2.txt', 'w')
+helloFile.write('HeyHiHellooo!!!!')
+helloFile.close()
+
+# Saving Variables with the shelve Module
+
+import shelve
+
+shelfFile = shelve.open('mydata') # on OS X this will create a file called mydata.db in cwd
+shelfFile['cats'] = ['Noodle', 'Fatso', 'Ding-Dong', 'Zophie']
+shelfFile.close()
+
+shelfFile = shelve.open('mydata')
+print(shelfFile['cats'])  # returns ['Noodle', 'Fatso', 'Ding-Dong', 'Zophie']
+shelfFile.close()
