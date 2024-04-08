@@ -55,3 +55,23 @@ try:
     print("Content has been successfully written to the file.")
 except Exception as e:
     print(f"An error occurred: {e}")
+
+    # returns Content has been successfully written to the file.
+
+
+
+# Append Mode example using F-Strings 
+    
+file_path = '/Users/danielgallagher/hello.txt'
+
+try:
+    # Open the file in append mode
+    with open(file_path, 'a') as hello_file:
+        # Write content to the file
+        hello_file.write("Hello, world!\n")  # Adding a newline character to separate lines
+
+    print("Content has been successfully appended to the file.")
+except Exception as e:
+    print(f"An error occurred: {e}")
+
+    # Returns Content has been successfully appended to the file.
