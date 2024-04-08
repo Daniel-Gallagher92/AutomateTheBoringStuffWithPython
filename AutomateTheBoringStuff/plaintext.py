@@ -93,3 +93,9 @@ shelfFile.close()
 shelfFile = shelve.open('mydata')
 print(shelfFile['cats'])  # returns ['Noodle', 'Fatso', 'Ding-Dong', 'Zophie']
 shelfFile.close()
+
+
+# Working with shelf file keys and values methods 
+shelfFile = shelve.open('mydata') # you must reopen the file to interact with this 
+print(list(shelfFile.keys())) # returns ['cats']
+print(list(shelfFile.values())) # returns [['Noodle', 'Fatso', 'Ding-Dong', 'Zophie']]
