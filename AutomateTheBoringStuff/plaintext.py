@@ -51,6 +51,7 @@ try:
     with open(file_path, 'w') as hello_file:
         # Write content to the file
         hello_file.write("Hello, world!")
+        hello_file.close()
 
     print("Content has been successfully written to the file.")
 except Exception as e:
@@ -69,6 +70,7 @@ try:
     with open(file_path, 'a') as hello_file:
         # Write content to the file
         hello_file.write("Hello, world!\n")  # Adding a newline character to separate lines
+        hello_file.close()
 
     print("Content has been successfully appended to the file.")
 except Exception as e:
