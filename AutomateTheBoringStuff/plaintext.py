@@ -8,6 +8,8 @@ helloFile.close()
 #     content = file.read()
 #     print(content)
 
+
+
 import os
 
 
@@ -33,3 +35,23 @@ print(lines)
 
 # by using the readlines method, returned, printed in the terminal is the following...
 # ["When, in disgrace with fortune and men's eyes,\n", '\n', 'I all alone beweep my outcast state,\n', '\n', 'And trouble deaf heaven with my bootless cries,\n', '\n', 'And look upon myself and curse my fate,\n']
+
+# Opening in Write mode. Pass 'w' as second arg 
+
+# helloFile = open('/Users/danielgallagher/hello.txt', 'w')
+
+# The above line is commented out, but is exactly what you do to write to a file. 
+
+# The below code, error handling is used to ensure a message is returned to prove the code works as expected 
+
+file_path = '/Users/danielgallagher/hello.txt'
+
+try:
+    # Open the file in write mode
+    with open(file_path, 'w') as hello_file:
+        # Write content to the file
+        hello_file.write("Hello, world!")
+
+    print("Content has been successfully written to the file.")
+except Exception as e:
+    print(f"An error occurred: {e}")
