@@ -101,3 +101,24 @@ shelfFile.close()
 shelfFile = shelve.open('mydata') # you must reopen the file to interact with this 
 print(list(shelfFile.keys())) # returns ['cats']
 print(list(shelfFile.values())) # returns [['Noodle', 'Fatso', 'Ding-Dong', 'Zophie']]
+
+
+helloFile = open('/Users/danielgallagher/hello2.txt', 'a')
+helloFile.write('\nHeyHiHellooo!!!!')
+helloFile.close()
+
+helloFile = open('/Users/danielgallagher/hello2.txt', 'r')
+content = helloFile.read()
+helloFile.close()
+print(content)
+
+helloFile = open('/Users/danielgallagher/hello2.txt', 'a')
+helloFile.write('\nBacon is not a vegetable.')
+helloFile.close()
+
+print('\n')
+
+helloFile = open('/Users/danielgallagher/hello2.txt', 'r')
+content = helloFile.read()
+helloFile.close()
+print(content)
