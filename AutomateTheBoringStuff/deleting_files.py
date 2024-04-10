@@ -4,30 +4,30 @@ import os
 
 # # you can pass relative path if you know you're in that directory, otherwise, specify absolute path
 
-# print(os.getcwd())
+print(os.getcwd()) # you are not in the directory to delete following file, must pass abspath
 
-# os.unlink('/Users/danielgallagher/python/delicious_backup/spamalot.txt')
+# os.unlink('/Users/danielgallagher/python/delicious_backup/spamalot.txt') # confirm: deleted spamalot in given dir
 
 # # permanently delete empty folder, WILL NOT WORK IF ANY FILES OR FOLDERS ARE IN FOLDER TO BE DELETED 
 
-# os.rmdir('/Users/danielgallagher/python/delicious/walnut/waffles')
+# os.rmdir('/Users/danielgallagher/python/delicious/walnut/waffles') # confirm deletion of delicious walnut waffles 
 
 # # permanently delete folder and ALL OF ITS CONTENTS :::DANGER!!::: 
 
-# import shutil
+import shutil
 
-# shutil.rmtree('/Users/danielgallagher/python/delicious_backup')
+# shutil.rmtree('/Users/danielgallagher/python/delicious_backup') # confirm deletion of entire backup folder ;(
 
 
 
 # RECOMMENDED: DRY RUN
 
-os.chdir('/Users/danielgallagher/python/delicious')
+# os.chdir('/Users/danielgallagher/python/delicious')
 
-for filename in os.listdir():
-  if filename.endswith('.txt'):
-    #os.unlink(fileName)
-    print(filename) # returns filler2.txt
+# for filename in os.listdir():
+#   if filename.endswith('.txt'):
+#     #os.unlink(fileName)
+#     print(filename) # returns filler2.txt
 #                             spam.txt
 #                             spamalot.txt
 #                             filler.txt
@@ -39,4 +39,4 @@ for filename in os.listdir():
 
 import send2trash
 
-send2trash.send2trash('/Users/danielgallagher/Desktop/learn_struggle_master.jpeg')
+send2trash.send2trash('/Users/danielgallagher/Desktop/learn_struggle_master.jpeg') # confirm via GUI; jpeg image was sent to trash
