@@ -32,3 +32,11 @@ for filename in os.listdir():
 #                             spamalot.txt
 #                             filler.txt
 #     If all the returned filenames are the ones you intend to delete, uncomment call to os.link(fileName)
+
+# NOT PERMANENTLY DELETING
+
+# send2trash module sends them to recycling bin
+
+import send2trash
+
+send2trash.send2trash('/Users/danielgallagher/Desktop/learn_struggle_master.jpeg')
