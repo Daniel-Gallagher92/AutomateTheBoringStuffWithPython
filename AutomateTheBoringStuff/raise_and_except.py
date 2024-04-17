@@ -7,6 +7,9 @@ raise Exception('This is the helpful error message')
 #Exception: This is the helpful error message
 
 def boxPrint(symbol, width, height):
+  if len(symbol) != 1:
+    raise Exception('"symbol" needs to be a string of length 1.')
+  
   print(symbol * width)
 
   for i in range(max(height - 2,0)):
@@ -15,6 +18,6 @@ def boxPrint(symbol, width, height):
   print(symbol * width)
 
 
-boxPrint('*', 15, 5)
+boxPrint('**', 15, 5)
 
 
