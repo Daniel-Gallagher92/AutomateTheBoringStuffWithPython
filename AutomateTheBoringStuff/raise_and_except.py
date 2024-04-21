@@ -10,20 +10,32 @@
     #raise Exception('This is the helpful error message')
 #Exception: This is the helpful error message
 
-def boxPrint(symbol, width, height):
-  if len(symbol) != 1:
-    raise Exception('"symbol" needs to be a string of length 1.')
-  if (width < 2 ) or (height < 2):
-    raise Exception('"width" and "height" must be greater or equal to 2.')
+# def boxPrint(symbol, width, height):
+#   if len(symbol) != 1:
+#     raise Exception('"symbol" needs to be a string of length 1.')
+#   if (width < 2 ) or (height < 2):
+#     raise Exception('"width" and "height" must be greater or equal to 2.')
   
-  print(symbol * width)
+#   print(symbol * width)
 
-  for i in range(max(height - 2,0)):
-    print(symbol + (' ' * (width - 2)) + symbol) 
+#   for i in range(max(height - 2,0)):
+#     print(symbol + (' ' * (width - 2)) + symbol) 
 
-  print(symbol * width)
+#   print(symbol * width)
 
 
-boxPrint('*', 1, 1)
+# boxPrint('*', 1, 1)
 
+
+# Getting the Traceback as a String
+
+import traceback
+
+try:
+  raise Exception('This is the error message.')
+except: 
+  errorFile = open('error_log.txt', 'a')
+  errorFile.write(traceback.format_exc())
+  errorFile.close()
+  print('The traceback info was written to error_log.txt')
 
