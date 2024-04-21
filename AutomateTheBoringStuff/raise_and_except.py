@@ -29,13 +29,29 @@
 
 # Getting the Traceback as a String
 
-import traceback
+# import traceback
 
-try:
-  raise Exception('This is the error message.')
-except: 
-  errorFile = open('error_log.txt', 'a')
-  errorFile.write(traceback.format_exc())
-  errorFile.close()
-  print('The traceback info was written to error_log.txt')
+# try:
+#   raise Exception('This is the error message.')
+# except: 
+#   errorFile = open('error_log.txt', 'a')
+#   errorFile.write(traceback.format_exc())
+#   errorFile.close()
+#   print('The traceback info was written to error_log.txt')
 
+# Traffic Sim program 
+
+market_2nd = {'ns': 'green', 'ew': 'red'}
+
+def switchLights(intersection):
+  for key in intersection.keys():
+    if intersection[key] == 'green':
+      intersection[key] = 'yellow'
+    elif intersection[key] == 'yellow':
+      intersection[key] = 'red'
+    elif intersection[key] == 'red':
+      intersection[key] = 'green'
+  assert 'red' in intersection.values(), 'Neither light is red!' + str(intersection)
+
+switchLights(market_2nd)
+# returns full traceback ending in AssertionError: Neither light is red!{'ns': 'yellow', 'ew': 'green'}
