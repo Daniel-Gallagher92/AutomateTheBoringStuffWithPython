@@ -1,4 +1,8 @@
-raise Exception('This is the helpful error message')
+# raise Exception('This is the helpful error message')
+
+# AFTER ALL THIS DEBUGGING AND FINDING NOTHING......
+# It turns out the raise Exception line when left in will break the program and nothing else will run
+# comment it out and the boxPrint function works!
 
 # returns in terminal:
 #Traceback (most recent call last):
