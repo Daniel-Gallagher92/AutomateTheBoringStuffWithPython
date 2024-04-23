@@ -1,6 +1,7 @@
 import logging
 
 logging.basicConfig(level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')
+logging.disable(logging.CRITICAL) # this line disables log messages that follow. Comment out to see logs again
 
 logging.debug('Start of Program')
 # Example: Buggy Factorial Program
