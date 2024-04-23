@@ -9,7 +9,7 @@ def factorial(n):
   logging.debug('Start of factorial(%s)' % (n))
   total = 1 
 
-  for i in range(n + 1):
+  for i in range(1, n + 1): # range must start at 1, instead of the default zero when given only one arg
     total *= i
     logging.debug('i is %s, total is %s' % (i,total))
 
