@@ -21,4 +21,3 @@ def factorial(n):
 print(factorial(5))
 
 logging.debug('End of Program')
-# returns 0 .... BROKEN! 
