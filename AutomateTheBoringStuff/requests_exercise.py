@@ -1,4 +1,4 @@
-import requests
+import requests, os, pdb
 
 response = requests.get("https://automatetheboringstuff.com/files/rj.txt")
 
@@ -40,7 +40,11 @@ print(response.text[:500])
 badResponse = requests.get("https://automatetheboringstuff.com/asdhufosuhdfoih")
 
 response.raise_for_status() # returns nothing since this was a successful download 
-badResponse.raise_for_status()
+# badResponse.raise_for_status() 
+
+# ALWAYS COMMENT OUT RAISED EXCEPTIONS
+
+# IF YOU RAISE AN EXCEPTION, THE REST OF YOUR PROGRAM WILL NOT EXECUTE
 
 # since the download fails, this exception is returned in the terminal 
 
@@ -50,3 +54,9 @@ badResponse.raise_for_status()
 #   File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/requests/models.py", line 1021, in raise_for_status
 #     raise HTTPError(http_error_msg, response=self)
 # requests.exceptions.HTTPError: 404 Client Error: Not Found for url: https://automatetheboringstuff.com/asdhufosuhdfoih
+
+file_path = os.path.join(os.getcwd(), 'RomeoAndJuliet.txt')
+# pdb.set_trace()
+playFile = open(file_path, 'wb')
+for chunk in response.iter_content(100000):
+  playFile.write(chunk)
