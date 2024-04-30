@@ -60,3 +60,5 @@ file_path = os.path.join(os.getcwd(), 'RomeoAndJuliet.txt')
 playFile = open(file_path, 'wb')
 for chunk in response.iter_content(100000):
   playFile.write(chunk)
+
+playFile.close()
