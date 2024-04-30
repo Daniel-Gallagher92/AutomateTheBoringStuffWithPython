@@ -35,3 +35,18 @@ print(response.text[:500])
 
 
 
+# raising an exception if download fails 
+
+badResponse = requests.get("https://automatetheboringstuff.com/asdhufosuhdfoih")
+
+response.raise_for_status() # returns nothing since this was a successful download 
+badResponse.raise_for_status()
+
+# since the download fails, this exception is returned in the terminal 
+
+# Traceback (most recent call last):
+#   File "/Users/danielgallagher/python/automate_the_boring_stuff/AutomateTheBoringStuffWithPython/AutomateTheBoringStuff/requests_exercise.py", line 42, in <module>
+#     badResponse.raise_for_status()
+#   File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/requests/models.py", line 1021, in raise_for_status
+#     raise HTTPError(http_error_msg, response=self)
+# requests.exceptions.HTTPError: 404 Client Error: Not Found for url: https://automatetheboringstuff.com/asdhufosuhdfoih
